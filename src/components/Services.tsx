@@ -39,7 +39,7 @@ const Services = () => {
             Наши преимущества
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4">
-            Почему выбирают <span className="text-gradient-gold">нас</span>
+            Почему выбирают <span className="text-gradient-steel">нас</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             Работаем с физическими лицами и организациями. Опт и розница.
