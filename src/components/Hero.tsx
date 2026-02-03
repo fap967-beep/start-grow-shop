@@ -18,7 +18,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <span className="inline-block px-4 py-2 mb-6 text-sm font-medium text-accent bg-accent/10 rounded-full">
-              Добро пожаловать
+              г. Калуга, ул. Тульская, 102
             </span>
           </motion.div>
 
@@ -26,12 +26,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="font-display text-5xl md:text-7xl lg:text-8xl font-semibold leading-tight mb-6"
+            className="font-display text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-6"
           >
-            Создаём{" "}
-            <span className="text-gradient-gold">уникальный</span>
-            <br />
-            опыт для вас
+            Подшипники{" "}
+            <span className="text-gradient-gold">на Тульской</span>
           </motion.h1>
 
           <motion.p
@@ -40,8 +38,8 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
           >
-            Мы предлагаем премиальные решения, которые превосходят ожидания 
-            и создают незабываемые впечатления для наших клиентов.
+            Широкий ассортимент подшипников для промышленности, автомобилей 
+            и сельхозтехники. Качественная продукция по доступным ценам.
           </motion.p>
 
           <motion.div
@@ -51,10 +49,10 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <a
-              href="#services"
+              href="tel:+74842560929"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-medium bg-accent text-accent-foreground rounded-full hover:opacity-90 transition-all hover:gap-3"
             >
-              Узнать больше
+              Позвонить
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
