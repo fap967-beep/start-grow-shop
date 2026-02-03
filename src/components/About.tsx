@@ -15,7 +15,7 @@ const About = () => {
               О нас
             </span>
             <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6">
-              Ваш надёжный <span className="text-gradient-gold">поставщик</span>
+              Ваш надёжный <span className="text-gradient-steel">поставщик</span>
             </h2>
             <p className="text-muted-foreground mb-6 leading-relaxed">
               «Подшипники на Тульской» — специализированный павильон по продаже 
@@ -29,13 +29,13 @@ const About = () => {
 
             <div className="grid grid-cols-2 gap-8">
               <div>
-                <div className="font-display text-3xl font-semibold text-gradient-gold mb-2">
+                <div className="font-display text-3xl font-semibold text-gradient-steel mb-2">
                   ИП Зимина О.Н.
                 </div>
                 <p className="text-sm text-muted-foreground">Официальная организация</p>
               </div>
               <div>
-                <div className="font-display text-3xl font-semibold text-gradient-gold mb-2">
+                <div className="font-display text-3xl font-semibold text-gradient-steel mb-2">
                   Калуга
                 </div>
                 <p className="text-sm text-muted-foreground">ул. Тульская, 102</p>
@@ -54,7 +54,7 @@ const About = () => {
               <div className="absolute inset-4 rounded-xl border border-accent/20" />
               <div className="absolute inset-8 rounded-lg border border-accent/10" />
               <div className="relative z-10 text-center p-8">
-                <div className="font-display text-5xl font-bold text-gradient-gold mb-4">
+                <div className="font-display text-5xl font-bold text-gradient-steel mb-4">
                   ⚙️
                 </div>
                 <p className="text-foreground font-display text-xl font-semibold mb-2">

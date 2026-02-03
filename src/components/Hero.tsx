@@ -29,7 +29,7 @@ const Hero = () => {
             className="font-display text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-6"
           >
             Подшипники{" "}
-            <span className="text-gradient-gold">на Тульской</span>
+            <span className="text-gradient-steel">на Тульской</span>
           </motion.h1>
 
           <motion.p

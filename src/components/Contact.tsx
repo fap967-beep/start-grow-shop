@@ -29,7 +29,7 @@ const Contact = () => {
             Контакты
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4">
-            Свяжитесь с <span className="text-gradient-gold">нами</span>
+            Свяжитесь с <span className="text-gradient-steel">нами</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             Готовы обсудить ваш проект? Напишите нам, и мы ответим в ближайшее время.
