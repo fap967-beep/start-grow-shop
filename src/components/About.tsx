@@ -12,38 +12,33 @@ const About = () => {
             viewport={{ once: true }}
           >
             <span className="inline-block px-4 py-2 mb-4 text-sm font-medium text-accent bg-accent/10 rounded-full">
-              О компании
+              О нас
             </span>
             <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6">
-              Мы создаём <span className="text-gradient-gold">будущее</span> вместе
+              Ваш надёжный <span className="text-gradient-gold">поставщик</span>
             </h2>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Наша компания — это команда профессионалов, объединённых общей целью: 
-              предоставлять клиентам исключительный сервис и продукты высочайшего качества.
+              «Подшипники на Тульской» — специализированный павильон по продаже 
+              подшипников в Калуге. Мы работаем с проверенными поставщиками и гарантируем 
+              качество каждого изделия.
             </p>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Мы верим в силу инноваций и постоянно развиваемся, чтобы соответствовать 
-              самым высоким стандартам индустрии и превосходить ожидания наших партнёров.
+              Предлагаем подшипники для автомобилей, промышленного оборудования, 
+              сельхозтехники и бытовой техники. Консультируем по подбору и совместимости.
             </p>
 
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-2 gap-8">
               <div>
-                <div className="font-display text-4xl font-semibold text-gradient-gold mb-2">
-                  10+
+                <div className="font-display text-3xl font-semibold text-gradient-gold mb-2">
+                  ИП Зимина О.Н.
                 </div>
-                <p className="text-sm text-muted-foreground">Лет опыта</p>
+                <p className="text-sm text-muted-foreground">Официальная организация</p>
               </div>
               <div>
-                <div className="font-display text-4xl font-semibold text-gradient-gold mb-2">
-                  500+
+                <div className="font-display text-3xl font-semibold text-gradient-gold mb-2">
+                  Калуга
                 </div>
-                <p className="text-sm text-muted-foreground">Клиентов</p>
-              </div>
-              <div>
-                <div className="font-display text-4xl font-semibold text-gradient-gold mb-2">
-                  99%
-                </div>
-                <p className="text-sm text-muted-foreground">Довольных</p>
+                <p className="text-sm text-muted-foreground">ул. Тульская, 102</p>
               </div>
             </div>
           </motion.div>
@@ -59,11 +54,14 @@ const About = () => {
               <div className="absolute inset-4 rounded-xl border border-accent/20" />
               <div className="absolute inset-8 rounded-lg border border-accent/10" />
               <div className="relative z-10 text-center p-8">
-                <div className="font-display text-6xl font-bold text-gradient-gold mb-4">
-                  B
+                <div className="font-display text-5xl font-bold text-gradient-gold mb-4">
+                  ⚙️
                 </div>
+                <p className="text-foreground font-display text-xl font-semibold mb-2">
+                  Подшипники
+                </p>
                 <p className="text-muted-foreground text-sm">
-                  Ваш надёжный партнёр
+                  Качество и надёжность
                 </p>
               </div>
             </div>

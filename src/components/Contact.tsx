@@ -46,21 +46,16 @@ const Contact = () => {
           >
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
-                <Mail className="w-5 h-5 text-accent" />
-              </div>
-              <div>
-                <h3 className="font-display text-lg font-semibold mb-1">Email</h3>
-                <p className="text-muted-foreground">info@brand.com</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
                 <Phone className="w-5 h-5 text-accent" />
               </div>
               <div>
-                <h3 className="font-display text-lg font-semibold mb-1">Телефон</h3>
-                <p className="text-muted-foreground">+7 (999) 123-45-67</p>
+                <h3 className="font-display text-lg font-semibold mb-1">Телефоны</h3>
+                <p className="text-muted-foreground">
+                  <a href="tel:+74842560929" className="hover:text-accent transition-colors">(4842) 56-09-29</a>
+                </p>
+                <p className="text-muted-foreground">
+                  <a href="tel:+74842333435" className="hover:text-accent transition-colors">(4842) 33-34-35</a>
+                </p>
               </div>
             </div>
 
@@ -71,8 +66,22 @@ const Contact = () => {
               <div>
                 <h3 className="font-display text-lg font-semibold mb-1">Адрес</h3>
                 <p className="text-muted-foreground">
-                  Москва, ул. Примерная, д. 123
+                  г. Калуга, ул. Тульская, 102
                 </p>
+                <p className="text-sm text-muted-foreground mt-1">
+                  ИП Зимина О.Н.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                <Mail className="w-5 h-5 text-accent" />
+              </div>
+              <div>
+                <h3 className="font-display text-lg font-semibold mb-1">Режим работы</h3>
+                <p className="text-muted-foreground">Пн-Пт: 9:00 - 18:00</p>
+                <p className="text-muted-foreground">Сб: 10:00 - 15:00</p>
               </div>
             </div>
           </motion.div>

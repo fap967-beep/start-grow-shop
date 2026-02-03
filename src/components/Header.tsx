@@ -9,8 +9,8 @@ const Header = () => {
       className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border"
     >
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="font-display text-2xl font-semibold tracking-tight">
-          <span className="text-gradient-gold">Бренд</span>
+        <a href="#" className="font-display text-xl md:text-2xl font-semibold tracking-tight">
+          Подшипники <span className="text-gradient-gold">на Тульской</span>
         </a>
         
         <ul className="hidden md:flex items-center gap-8">

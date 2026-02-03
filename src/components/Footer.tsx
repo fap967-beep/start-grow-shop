@@ -3,8 +3,8 @@ const Footer = () => {
     <footer className="py-12 border-t border-border">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="font-display text-2xl font-semibold">
-            <span className="text-gradient-gold">Бренд</span>
+          <div className="font-display text-xl font-semibold">
+            Подшипники <span className="text-gradient-gold">на Тульской</span>
           </div>
 
           <nav className="flex items-center gap-8">
@@ -29,7 +29,7 @@ const Footer = () => {
           </nav>
 
           <p className="text-sm text-muted-foreground">
-            © 2024 Бренд. Все права защищены.
+            © 2024 ИП Зимина О.Н. Все права защищены.
           </p>
         </div>
       </div>
