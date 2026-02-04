@@ -1,11 +1,25 @@
 import { motion } from "framer-motion";
 import { Phone, MapPin, Clock } from "lucide-react";
+import bearingHero from "@/assets/bearing-hero.png";
 
 const Hero = () => {
   return (
     <section className="pt-32 pb-16 bg-secondary/50">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-3 gap-12 items-center">
+          {/* Left - Bearing image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="hidden lg:flex justify-center"
+          >
+            <img
+              src={bearingHero}
+              alt="Промышленный подшипник"
+              className="w-full max-w-xs drop-shadow-xl"
+            />
+          </motion.div>
           {/* Left content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
