@@ -1,48 +1,48 @@
 import { motion } from "framer-motion";
-import { Sparkles, Shield, Zap, Heart } from "lucide-react";
+import { Package, Shield, Truck, Headphones } from "lucide-react";
 
 const services = [
   {
-    icon: Sparkles,
+    icon: Package,
     title: "Широкий ассортимент",
-    description: "Подшипники всех типов и размеров: шариковые, роликовые, игольчатые.",
+    description: "Подшипники всех типов и размеров: шариковые, роликовые, игольчатые, упорные.",
   },
   {
     icon: Shield,
     title: "Гарантия качества",
-    description: "Только оригинальная продукция от проверенных производителей.",
+    description: "Только оригинальная продукция от проверенных производителей с гарантией.",
   },
   {
-    icon: Zap,
+    icon: Truck,
     title: "Быстрая поставка",
-    description: "Наличие на складе и оперативный заказ под ваши нужды.",
+    description: "Большой склад в наличии. Заказ редких позиций от 24 часов.",
   },
   {
-    icon: Heart,
+    icon: Headphones,
     title: "Консультации",
-    description: "Поможем подобрать нужный подшипник по размерам и характеристикам.",
+    description: "Поможем подобрать подшипник по размерам, номеру или применению.",
   },
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 bg-secondary/30">
+    <section id="services" className="py-20 bg-secondary/50">
       <div className="container mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <span className="inline-block px-4 py-2 mb-4 text-sm font-medium text-accent bg-accent/10 rounded-full">
+          <span className="text-sm font-medium text-primary uppercase tracking-wider">
             Наши преимущества
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4">
-            Почему выбирают <span className="text-gradient-steel">нас</span>
+          <h2 className="font-display text-3xl md:text-4xl font-semibold mt-2 mb-4 text-foreground">
+            Почему выбирают нас
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Работаем с физическими лицами и организациями. Опт и розница.
+            Работаем с физическими лицами и организациями. Оптовые и розничные продажи.
           </p>
         </motion.div>
 
@@ -50,16 +50,16 @@ const Services = () => {
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group p-8 bg-card rounded-2xl border border-border hover:border-accent/50 transition-all hover:shadow-lg"
+              className="p-6 bg-card rounded border border-border hover:border-primary/30 transition-colors"
             >
-              <div className="w-14 h-14 mb-6 rounded-xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                <service.icon className="w-7 h-7 text-accent" />
+              <div className="w-12 h-12 mb-4 rounded bg-primary/10 flex items-center justify-center">
+                <service.icon className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="font-display text-xl font-semibold mb-3">
+              <h3 className="font-display text-lg font-semibold mb-2 text-foreground">
                 {service.title}
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">

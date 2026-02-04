@@ -1,136 +1,150 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Phone, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
+    phone: "",
     message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic will be added later
     console.log("Form submitted:", formData);
   };
 
   return (
-    <section id="contact" className="py-24 bg-secondary/30">
+    <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <span className="inline-block px-4 py-2 mb-4 text-sm font-medium text-accent bg-accent/10 rounded-full">
+          <span className="text-sm font-medium text-primary uppercase tracking-wider">
             Контакты
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4">
-            Свяжитесь с <span className="text-gradient-steel">нами</span>
+          <h2 className="font-display text-3xl md:text-4xl font-semibold mt-2 mb-4 text-foreground">
+            Свяжитесь с нами
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Готовы обсудить ваш проект? Напишите нам, и мы ответим в ближайшее время.
+            Позвоните или оставьте заявку — мы поможем подобрать нужные подшипники
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact info */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-6"
           >
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
-                <Phone className="w-5 h-5 text-accent" />
-              </div>
-              <div>
-                <h3 className="font-display text-lg font-semibold mb-1">Телефоны</h3>
-                <p className="text-muted-foreground">
-                  <a href="tel:+74842560929" className="hover:text-accent transition-colors">(4842) 56-09-29</a>
-                </p>
-                <p className="text-muted-foreground">
-                  <a href="tel:+74842333435" className="hover:text-accent transition-colors">(4842) 33-34-35</a>
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
-                <MapPin className="w-5 h-5 text-accent" />
-              </div>
-              <div>
-                <h3 className="font-display text-lg font-semibold mb-1">Адрес</h3>
-                <p className="text-muted-foreground">
-                  г. Калуга, ул. Тульская, 102
-                </p>
-                <p className="text-sm text-muted-foreground mt-1">
-                  ИП Зимина О.Н.
-                </p>
+            <div className="p-6 bg-card rounded border border-border">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded bg-primary/10 flex items-center justify-center shrink-0">
+                  <Phone className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-display text-lg font-semibold mb-2 text-foreground">Телефоны</h3>
+                  <a href="tel:+74842560929" className="block text-primary hover:underline mb-1">
+                    (4842) 56-09-29
+                  </a>
+                  <a href="tel:+74842333435" className="block text-primary hover:underline">
+                    (4842) 33-34-35
+                  </a>
+                </div>
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
-                <Mail className="w-5 h-5 text-accent" />
+            <div className="p-6 bg-card rounded border border-border">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded bg-primary/10 flex items-center justify-center shrink-0">
+                  <MapPin className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-display text-lg font-semibold mb-2 text-foreground">Адрес</h3>
+                  <p className="text-foreground">г. Калуга, ул. Тульская, 102</p>
+                  <p className="text-sm text-muted-foreground mt-1">ИП Зимина О.Н.</p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-display text-lg font-semibold mb-1">Режим работы</h3>
-                <p className="text-muted-foreground">Пн-Пт: 9:00 - 18:00</p>
-                <p className="text-muted-foreground">Сб: 10:00 - 15:00</p>
+            </div>
+
+            <div className="p-6 bg-card rounded border border-border">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded bg-primary/10 flex items-center justify-center shrink-0">
+                  <Clock className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-display text-lg font-semibold mb-2 text-foreground">Режим работы</h3>
+                  <p className="text-foreground">Пн–Пт: 9:00 – 18:00</p>
+                  <p className="text-foreground">Сб: 9:00 – 15:00</p>
+                </div>
               </div>
             </div>
           </motion.div>
 
+          {/* Contact form */}
           <motion.form
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
             onSubmit={handleSubmit}
-            className="space-y-6"
+            className="p-6 bg-card rounded border border-border"
           >
-            <div>
-              <input
-                type="text"
-                placeholder="Ваше имя"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-5 py-4 bg-card border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all"
-                required
-              />
+            <h3 className="font-display text-xl font-semibold mb-6 text-foreground">
+              Оставить заявку
+            </h3>
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-1.5">
+                  Ваше имя
+                </label>
+                <input
+                  type="text"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="w-full px-4 py-3 bg-background border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-1.5">
+                  Телефон
+                </label>
+                <input
+                  type="tel"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  placeholder="+7 (___) ___-__-__"
+                  className="w-full px-4 py-3 bg-background border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-1.5">
+                  Какие подшипники вам нужны?
+                </label>
+                <textarea
+                  rows={4}
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  placeholder="Укажите номер, размеры или назначение"
+                  className="w-full px-4 py-3 bg-background border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full px-6 py-3 text-base font-medium bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors"
+              >
+                Отправить заявку
+              </button>
             </div>
-            <div>
-              <input
-                type="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-5 py-4 bg-card border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all"
-                required
-              />
-            </div>
-            <div>
-              <textarea
-                placeholder="Сообщение"
-                rows={4}
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full px-5 py-4 bg-card border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all resize-none"
-                required
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-medium bg-accent text-accent-foreground rounded-xl hover:opacity-90 transition-opacity"
-            >
-              Отправить сообщение
-              <Send className="w-4 h-4" />
-            </button>
           </motion.form>
         </div>
       </div>
