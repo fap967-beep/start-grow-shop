@@ -9,13 +9,13 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1280px",
       },
     },
     extend: {
       fontFamily: {
-        display: ['Playfair Display', 'serif'],
-        sans: ['Inter', 'sans-serif'],
+        display: ['Roboto Slab', 'serif'],
+        sans: ['Open Sans', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

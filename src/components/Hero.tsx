@@ -1,84 +1,79 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { Phone, MapPin, Clock } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-background to-secondary/30">
-      {/* Decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
-      </div>
-
-      <div className="container mx-auto px-6 pt-24 pb-16 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+    <section className="pt-32 pb-16 bg-secondary/50">
+      <div className="container mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left content */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.5 }}
           >
-            <span className="inline-block px-4 py-2 mb-6 text-sm font-medium text-accent bg-accent/10 rounded-full">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-6 text-sm font-medium text-primary bg-primary/10 rounded">
+              <MapPin className="w-4 h-4" />
               г. Калуга, ул. Тульская, 102
-            </span>
+            </div>
+
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-6 text-foreground">
+              Подшипники на Тульской
+            </h1>
+
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-xl">
+              Широкий ассортимент подшипников для промышленности, автомобилей 
+              и сельхозтехники. Качественная продукция по доступным ценам.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <a
+                href="tel:+74842560929"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                (4842) 56-09-29
+              </a>
+              <a
+                href="tel:+74842333435"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium border border-border rounded hover:bg-secondary transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                (4842) 33-34-35
+              </a>
+            </div>
+
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <Clock className="w-4 h-4" />
+              <span>Пн–Пт: 9:00–18:00, Сб: 9:00–15:00</span>
+            </div>
           </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="font-display text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-6"
-          >
-            Подшипники{" "}
-            <span className="text-gradient-steel">на Тульской</span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
-          >
-            Широкий ассортимент подшипников для промышленности, автомобилей 
-            и сельхозтехники. Качественная продукция по доступным ценам.
-          </motion.p>
-
+          {/* Right - Info cards */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="grid grid-cols-2 gap-4"
           >
-            <a
-              href="tel:+74842560929"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-medium bg-accent text-accent-foreground rounded-full hover:opacity-90 transition-all hover:gap-3"
-            >
-              Позвонить
-              <ArrowRight className="w-4 h-4" />
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-medium border border-border rounded-full hover:bg-secondary transition-colors"
-            >
-              Связаться с нами
-            </a>
+            <div className="p-6 bg-card rounded border border-border">
+              <div className="text-3xl font-display font-bold text-primary mb-2">1000+</div>
+              <p className="text-sm text-muted-foreground">наименований в наличии</p>
+            </div>
+            <div className="p-6 bg-card rounded border border-border">
+              <div className="text-3xl font-display font-bold text-primary mb-2">Опт</div>
+              <p className="text-sm text-muted-foreground">и розничные продажи</p>
+            </div>
+            <div className="p-6 bg-card rounded border border-border">
+              <div className="text-3xl font-display font-bold text-primary mb-2">100%</div>
+              <p className="text-sm text-muted-foreground">оригинальная продукция</p>
+            </div>
+            <div className="p-6 bg-card rounded border border-border">
+              <div className="text-3xl font-display font-bold text-primary mb-2">24ч</div>
+              <p className="text-sm text-muted-foreground">срочный заказ</p>
+            </div>
           </motion.div>
         </div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        >
-          <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center">
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-              className="w-1.5 h-3 bg-accent rounded-full mt-2"
-            />
-          </div>
-        </motion.div>
       </div>
     </section>
   );
