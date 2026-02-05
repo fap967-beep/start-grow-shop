@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="pt-32 pb-16 bg-secondary/50">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-3 gap-12 items-center">
+        <div className="grid lg:grid-cols-[auto_1.5fr_1fr] gap-12 items-center">
           {/* Left - Bearing image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
