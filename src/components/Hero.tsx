@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Phone, MapPin, Clock } from "lucide-react";
 import bearingHero from "@/assets/bearing-hero.png";
+import TransparentImage from "@/components/TransparentImage";
 
 const Hero = () => {
   return (
@@ -14,7 +15,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="hidden lg:flex justify-center"
           >
-            <img
+            <TransparentImage
               src={bearingHero}
               alt="Промышленный подшипник"
               className="w-full max-w-xs drop-shadow-xl"
